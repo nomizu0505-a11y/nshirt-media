@@ -1,0 +1,1 @@
+const {chromium}=require('playwright');(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:740,height:640}});await p.goto('file://'+__dirname+'/s.html');await p.screenshot({path:__dirname+'/arigato.png',omitBackground:true});await b.close()})();
